@@ -24,11 +24,11 @@ Python: The backend logic of the chatbot is implemented using Python, including 
 ## Usage
 To interact with the chatbot, you can use the provided web interface or make HTTP requests to the deployed Flask API. Below are the endpoints available for interaction:
 
-/custom-workout: Generate a custom workout routine by providing your fitness goals, preferences, and available equipment.
+/workout_plan: Generate a custom workout routine by providing your fitness goals, preferences, and available equipment.
 
-/recipe-ideas: Get recipe suggestions based on your dietary preferences, restrictions, and culinary interests.
+/nutrition_advice: Get recipe suggestions based on your dietary preferences, restrictions, and culinary interests.
 
-/instant-workout: Generate a quick, on-the-go workout routine by specifying your desired intensity level and time constraints.
+/workout_frontend: Generate a quick, on-the-go workout routine by specifying your desired intensity level and time constraints.
 
 ## Deployment
 The chatbot is deployed as a Flask API and hosted on a server for accessibility. 
