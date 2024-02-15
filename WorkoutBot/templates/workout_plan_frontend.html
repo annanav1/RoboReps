@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  href="/static/css/output.css" rel="stylesheet"/>
+        <title>RoboReps</title>
+    </head>
+    <body class="bg-[#EFFAF8]">
+        <nav class="bg-white py-2 px-4 flex items-center justify-between">
+            <a href="/" class="block"><img src="../static/images/logo1.png" /></a>
+            <p class="font-bold text-[60px] text-[#0D4E47]">RoboReps</p>
+            <div></div>
+        </nav>
+        <div class="mt-10 flex flex-col justify-center items-center py-2">
+            <div class="lg:w-[50%] w-[90%] bg-white rounded-lg text-[#374151]">
+                <form id="workoutPlanForm" class="py-3 px-5">
+                    <h1 class="text-[20px] text-[#0D4E47]">Start sculpting your best self!</h1>
+                    <p class="text-[14px] text-[#0D4E47]">Design a personalized workout plan using OpenAI to propel you toward your goals. This plan provides a comprehensive outline, including exercise details and recommended resources. For optimal AI performance, clearly communicate your fitness goals or specific target areas. </p>
+                    <div id="workoutPlanErrorMessageContainer" class="mt-5 bg-red-50 border border-red-500 rounded-md p-2 hidden justify-between items-center">
+                        <p id="workoutPlanErrorMessage" class="text-red-500 font-semibold text-[14px]"></p>
+                        <button type="button" id="closeWorkoutPlanErrorBtn">
+                            <img width="18" height="18" src="https://img.icons8.com/color/18/delete-sign--v1.png" alt="delete-sign--v1"/>
+                        </button>
+                    </div>
+                    <div class="mt-5">
+                        <div>
+                            <label class="form-label block">What is your goal?</label>
+                            <textarea placeholder="eg. Strength and toning, endurance and fat loss, muscle definition." name="goal" class="form-control mt-2" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label class="form-label block">What is your age?</label>
+                            <textarea placeholder="Please enter numbers only." name="age" class="form-control mt-2" rows="1"></textarea>
+                        </div>
+                        <div>
+                            <label class="form-label block">How many days a week will you commit?</label>
+                            <textarea placeholder="Enter how many days:" name="days" class="form-control mt-2" rows="1"></textarea>
+                        </div>
+                        <div class="mt-4 grid lg:grid-cols-2 grid-cols-1 gap-4">
+                            <div>
+                                <label class="form-label block">What is workout duration preference?</label>
+                                
+                                <select id="timeCommit" name="timeCommit" type="text" class="form-control mt-2"></select>
+                                    
+                            </div>
+                            </div>
+                                <label class="form-label block">What is your prior experience?</label>
+                       
+                                <select id="experience" name="experience" type="text" class="form-control mt-2"></select>
+                        </div>
+                            <div>
+                                <label class="form-label block">What focus aligns with your goals?</label>
+
+                                <select id="project_type_dropdown" name="project_type" class="form-control form-select mt-2"></select>
+                            </div>
+                            <div>
+                                <label class="form-label block">Where will you be working out?</label>
+
+                                <select id="reference_preference" name="reference_preference" type="text" class="form-control mt-2"></select>
+                           
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+                <div class="mt-4 bg-[#F9FAFB] flex justify-end gap-3 py-3 px-5 rounded-b-lg">
+                    <a class="px-5 py-[7px] rounded-md border border-[#D1D5DB] bg-white text-[14px]" href="/">Back</a>
+                    <button type="button" id="workoutPlanSubmitBtn" class="flex items-center gap-small py-[7px] px-4 rounded-md border border-[#544372] bg-[#0D4E47] text-white text-[14px] disabled:bg-[#0D4E47] disabled:border-[#836b91]">
+                        <span>Create plan</span> 
+                        <img id="spinner" class="hidden" width="20" height="20" src="../static/images/spinner.gif" />
+                    </button>
+                </div>
+            </div>
+            <div id="workoutPlanResponseContainer" class="lg:w-[50%] w-[90%] rounded-lg mt-4 hidden">
+                <div class="bg-white py-3 px-5 rounded-t-md">
+                    <h1 class="text-[25px] text-[#0D4E47]">Custom Fitness Plan</h1>
+                </div>
+                <div class="bg-[#E7E9EC] py-3 px-5 rounded-b-md text-[20px]">
+                    <div class="response-cover" id="workoutPlanResponse"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>
