@@ -2,7 +2,8 @@
 
 Chatbot Project: RoboReps Workout and Recipe Chatbot
 
-This project is a chatbot program designed to provide users with custom workouts, recipe ideas, and instant workout generation. The inspiration for this project comes from the content creator Tina Huang, who inspired me with a similar project tutorial.
+This project is a chatbot program designed to provide users with custom workouts, recipe ideas, and instant workout generation. 
+  The inspiration for this project comes from the content creator Tina Huang, who inspired me with a similar project tutorial.
 
 The chatbot utilizes OpenAI's powerful natural language processing capabilities and is deployed as a Flask API, allowing users to interact with it through a web interface or API requests.
 
